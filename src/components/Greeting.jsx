@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Wrapper from './Wrapper';
 
 const Greeting = () => {
     const [changedText, setChangedTest] = useState(false);
@@ -10,8 +11,8 @@ const Greeting = () => {
     return (
         <div>
             <h1>Hello World!</h1>
-            {!changedText && <p>It's good to see you!</p>}
-            {changedText && <p>Changed!</p>}
+            {!changedText && <Wrapper>It's good to see you!</Wrapper>}
+            {changedText && <Wrapper>Changed!</Wrapper>}
             <button onClick={handleClick}>Change Text!</button>
         </div>
     );
